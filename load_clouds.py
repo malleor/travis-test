@@ -21,8 +21,3 @@ if __name__ == '__main__':
     cloud_ids.append(cloud_id)
   
   OUT_PARAMS['cloud_ids'] = cloud_ids
-
-
-# - The whole script is an undivisible unit and is exposed to
-#   the framework as a single algorithm.
-# - The manifest and input/output params are stored globally. 

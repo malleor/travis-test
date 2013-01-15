@@ -1,0 +1,2 @@
+- The whole script is an undivisible unit and is exposed to the framework as a single algorithm.
+- The manifest and input/output params are stored globally. 
