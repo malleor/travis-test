@@ -5,20 +5,24 @@ from frames import execute
 
 MANIFEST = {
   'name': 'load_clouds',
+  'doc': 'Loads all clouds of given format from the CWD.',
   'author': 'John Doe', 
   'version': '0.6',
   'multithreaded': False
 }
-
+DEF_IN_PARAMS['cloud_extension'] = 'copsxml'
 cloud_extension = IN_PARAMS['cloud_extension']
-cloud_ids = []
 
-for path in glob(join(cwd(), '*.'+cloud_extension)):
-  name = split(splitext(path)[0])[-1]
-  cloud_id = execute('import_cloud', path, name)
-  cloud_ids.append(cloud_id)
+if __file__ is not '__main__':
+  cloud_ids = []
   
-OUT_PARAMS['cloud_ids'] = cloud_ids
+  for path in glob(join(cwd(), '*.'+cloud_extension)):
+    name = split(splitext(path)[0])[-1]
+    cloud_id = execute('import_cloud', path, name)
+    cloud_ids.append(cloud_id)
+  
+  OUT_PARAMS['cloud_ids'] = cloud_ids
+
 
 # - The whole script is an undivisible unit and is exposed to
 #   the framework as a single algorithm.
