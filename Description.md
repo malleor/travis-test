@@ -1,6 +1,6 @@
 ### Concept
 
-- The whole script is an undivisible unit and is exposed to the framework as a single algorithm.
+- **The algorithm is a script file**, exposed to the framework as an importable module.
 - The manifest and input/output params are stored globally. 
 - The algorithm is identified as `module_name`.
 
