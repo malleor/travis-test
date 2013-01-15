@@ -4,7 +4,6 @@ from os.path import join, split, splitext
 from frames import execute
 
 MANIFEST = {
-  'name': 'load_clouds',
   'doc': 'Loads all clouds of given format from the CWD.',
   'author': 'John Doe', 
   'version': '0.6',
