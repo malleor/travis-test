@@ -12,3 +12,5 @@
 
 - No visible encapsulation of the execution context - the use of global variables.
 - The need to maintain `DEF_IN_PARAMS`-`IN_PARAMS` consistency is a potential source of errors. 
+
+Go, Travis!
