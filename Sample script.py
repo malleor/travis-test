@@ -13,7 +13,7 @@ MANIFEST = {
 DEF_IN_PARAMS['cloud_extension'] = 'copsxml'
 cloud_extension = IN_PARAMS['cloud_extension']
 
-if __file__ is not '__main__':
+if __name__ == '__main__':
   cloud_ids = []
   
   for path in glob(join(cwd(), '*.'+cloud_extension)):
